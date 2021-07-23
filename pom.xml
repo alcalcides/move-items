@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>indisponibilizarAppsComBug</groupId>
 	<artifactId>indisponibilizarAppsComBug</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>indisponibilizarAppsComBug</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

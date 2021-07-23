@@ -9,11 +9,11 @@ public class ListAllDirectoriesInFolder {
 
 	public FileSupport fileTool = new FileUtilities();
 
-	public String run(String path) {
+	public List<String> run(String path) {
 
 		List<String> foldersAndFiles = fileTool.getFilesInDirectory(path);
 		System.out.println(foldersAndFiles.toString());
-		return foldersAndFiles.toString();
+		return foldersAndFiles;
 
 	}
 }

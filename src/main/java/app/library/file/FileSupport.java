@@ -14,4 +14,6 @@ public interface FileSupport {
 	public abstract boolean appendFile(String path, String message);
 
 	public abstract boolean deleteFile(String path);
+	public abstract boolean moveFile(String pathFrom, String pathTo);
+	public abstract boolean move(String fromAbsolutePath, String toAbsolutePath);
 }

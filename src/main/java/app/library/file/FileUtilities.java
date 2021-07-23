@@ -7,6 +7,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Vector;
 
@@ -115,6 +119,41 @@ public class FileUtilities implements FileSupport {
 			files.add(file.getName());
 		}
 		return files;
+	}
+
+	@Override
+	public boolean moveFile(String pathFrom, String pathTo) {
+		System.out.println("moving " + pathFrom + " to " + pathTo);
+
+		Path source = FileSystems.getDefault().getPath(pathFrom);
+		Path target = new File(pathTo + pathFrom.split("/")[pathFrom.split("/").length - 1]).toPath();
+
+		try {
+			Path targetReturned = Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
+			return targetReturned.endsWith(target);
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+
+	}
+
+	@Override
+	public boolean move(String fromAbsolutePath, String toAbsolutePath) {
+		Boolean isMoved = false;
+        File from = new File(fromAbsolutePath);
+        File to = new File(toAbsolutePath);
+ 
+        try {
+            Path feedback = Files.move(from.toPath(), to.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            isMoved = feedback.endsWith(to.toPath());
+            System.out.println("Directory moved successfully.");
+        }
+        catch (IOException ex) {
+            ex.printStackTrace();
+        }
+		return isMoved;
+        
 	}
 
 }
