@@ -1,0 +1,6 @@
+{
+	"baseURL": "/home/consiste/thorsysMigra/",
+	"directoryFrom": "XTRBrasilOperacoes/",
+	"directoryTo": "XTRBrasilAppsEmManutencao/",
+	"fileUndesiredItems": "undesired-items.txt"
+}

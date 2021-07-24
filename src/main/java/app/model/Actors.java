@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Actors {
-	private List<String> appsAlreadyLaunched;
-	private List<String> appsToBeRemoved;
+	private List<String> itemsDiscovered;
+	private List<String> itemsToBeRemoved;
 	
 }

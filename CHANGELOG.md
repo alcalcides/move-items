@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2021-07-24
+### Added
+- Launches config file
+
+### Changed
+- Large Refactoring
+
 ## [1.0.0] - 2021-07-23
 ### Added
 - Moves folders from one path to another
