@@ -125,7 +125,6 @@ public class FileUtilities implements FileSupport {
 		try {
 			Path feedback = Files.move(from.toPath(), to.toPath(), StandardCopyOption.REPLACE_EXISTING);
 			isMoved = feedback.endsWith(to.toPath());
-			System.out.println("Directory moved successfully.");
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}

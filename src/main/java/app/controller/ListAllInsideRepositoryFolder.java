@@ -9,7 +9,7 @@ public class ListAllInsideRepositoryFolder {
 	public List<String> run(String path) {
 
 		List<String> foldersAndFiles = FileOperations.getFilesInDirectory(path);
-		System.out.println(foldersAndFiles.toString());
+		System.out.println("\nDiscovered:\n\t" + foldersAndFiles.toString());
 		return foldersAndFiles;
 
 	}

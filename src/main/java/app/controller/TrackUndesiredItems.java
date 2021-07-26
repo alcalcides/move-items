@@ -12,7 +12,7 @@ public class TrackUndesiredItems {
 		String undesiredItemsLite = FileOperations.readFrom(pathToUndesiredItemsList);
 		List<String> undesiredItemsDirty = Arrays.asList(undesiredItemsLite.split("\n"));
 		List<String> undesiredItems = CollectionsOperations.cleanEntries(undesiredItemsDirty);
-		System.out.println(undesiredItems.toString());
+		System.out.println("\nTo be moved: \n\t" + undesiredItems.toString());
 		return undesiredItems;
 	}
 
