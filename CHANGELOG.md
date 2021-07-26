@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.2.1] - 2021-07-24
+## [1.2.2] - 2021-07-26
+### Removed
+- Removes docker support
+
+## [1.2.1] - 2021-07-26
 ### Removed
 - Removes GUI to be runnable in servers
 
